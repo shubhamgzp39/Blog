@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href='css\header.css' rel='stylesheet' type='text/css'>
+
+    <link href='css\index.css' rel='stylesheet' type='text/css'>
+
+    <link href='css\font.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <div id="main-container-div">
+
+        <div class="header">
+            
+            <input id="signUpButtonClick" class="topButtons" type="button" onclick="openSignUpButton()" value="Sign Up">
+            <input id="loginButtonClick" class="topButtons" type="button" onclick="openSignIn()" value="Sign In">
+            <a id="pageTitle" class="logo-title">Blogger</a>
+            <p class="middleText">Explore, Imagine, Create</p>
+            <!-- <!-- <h3 align="right"> <a href="#"> Home </a>|<a href="#"> About |<a href="#"> Contact Us | View Posts </h3>  -->
+            
+<br><br><br><br>
+        </div>
+           
+        <div class="postButtons">
+
+            <input id="allPostsClick" class="middleButtons" type="button" onclick="getAllPosts()" value="All Posts" />
+            <input id="newPostClick" class="middleButtons" type="button" onclick="openCreatePost()" value="Create Post">
+        </div>
+        <footer id="footer">
+            <br>
+            <p> <b> Blogger 2019 | &copy All Rights Reserved </b> </p>
+            <br>
+        </footer>
+    </div>
+
+    <div id = "signInModal" class="modal">
+
+        <form class="modal-content" action="/action_page.php">
+            <span onclick="onCloseModalClicked()" class="close_signIn" title="Close Modal">&times;</span>
+            <div class="container">
+            <h1>Welcome Back!</h1>
+            <hr>
+            <label for="Username" class="label">
+                <b>Username</b>
+            </label>
+            <input type="text" placeholder="Enter Username" name="Username" required>
+
+            <label for="psw" class="label">
+                <b>Password</b>
+            </label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <div class="clearfix" class="label">
+                
+                <button type="submit" class="signinbtn">Sign In</button>
+            </div>
+        </div>
+        <div id="signUpPrompt" class="signUpForm">Not a member?
+            <span id="" class="signUp" onclick="openSignUp()">Sign Up</span>
+        </div>
+        </form>
+
+    </div>
+
+    <div id="signUpModal" class="modal">
+        <div class="modal-content-sigup">
+            <form class="modal-content-sigUp" action="/action_page.php">
+                <div class="container-signUp">
+                    <span onclick="onCloseModalClicked()" class="close" title="Close Modal">&times;</span>
+                    <h1>Get Started</h1>
+                    <hr>
+                    <label for="Fullname">
+                        <b>Full Name</b>
+                    </label>
+                    <input type="text" placeholder="Enter First Name" name="Fullname" required>
+                    <label for="Username">
+                        <b>Username</b>
+                    </label>
+                    <input type="text" placeholder="Enter Username" name="Username" required>
+                    <label for="psw">
+                        <b>Password</b>
+                    </label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <label for="psw-repeat">
+                        <b>Confirm Password</b>
+                    </label>
+                    <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
+                    <div class="clearfix">
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                        <button type="button" class="cancelbtn">Clear</button>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="newPostModal" class="newPostBox">
+
+        <div class="newPost-Content">
+            <span onclick="onCloseNewPost()" class="close_newPost">&times;</span>
+            <h1 id="formHeader">Create Your Post</h1>
+            <form id="newPostForm" action="/action_page.php">
+                <label for="newPostTitle">Title: </label>
+                <br />
+                <input id="newPostTitle" type="text" name="Title" class="post-title">
+                <br />
+                <br/>
+                <label for="postContent">Content: </label>
+                <textarea id="postContent" rows="27" cols="20" name="Content"></textarea>
+                <input id="newPostSubmit" type="submit" value="Create" align="right">
+            </form>
+        </div>
+        
+    </div>
+
+    
+    
+
+	<script src="/js/header.js"></script>
+    <script src="/js/index.js"></script>
+
+</body>
+</html>
